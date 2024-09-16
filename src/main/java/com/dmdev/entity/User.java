@@ -1,9 +1,6 @@
 package com.dmdev.entity;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -12,6 +9,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @Builder
 public class User {
+    @EqualsAndHashCode.Exclude
+    @ToString.Exclude
     private Integer id;
     private String name;
     private LocalDate birthday;
